@@ -13,7 +13,8 @@ services:
       - db
     image: wordpress:latest
     volumes:
-      - ./htdocs/tw/:/var/www/html
+      - ./htdocs/tw:/var/www/html/tw
+    working_dir: /var/www/html/tw
     ports: 
       - "8080:80"
     restart: always
